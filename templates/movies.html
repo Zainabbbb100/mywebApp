@@ -7,14 +7,17 @@
 </head>
 <body>
     <h1>Movie Details</h1>
+
     {% if movie %}
-        <p><strong>ID:</strong> {{ movie['Movie_ID'] }}</p>
-        <p><strong>Name:</strong> {{ movie['Movie_Name'] }}</p>
-        <p><strong>Description:</strong> {{ movie['Description'] }}</p>
+        <p><strong>ID:</strong> {{ movie[0] }}</p>
+        <p><strong>Name:</strong> {{ movie[1] }}</p>
+        <p><strong>Description:</strong> {{ movie[2] }}</p>
     {% else %}
-        <p>No movie found.</p>
+        <p style="color: red;"><strong>No movie found.</strong></p>
     {% endif %}
+
     <br>
     <a href="/">Back to Home</a>
 </body>
 </html>
+

@@ -36,24 +36,32 @@ def add_movie():
 @app.route("/search_movie", methods=["GET", "POST"])
 def search_movie():
     if request.method == "POST":
-        movie_id = request.form.get("movie_id")
-
+        movie_name = request.form.get("movie_name")  
         db = get_db_connection()
         with db.cursor() as cursor:
-            sql = "SELECT * FROM movies WHERE id = %s"
-            cursor.execute(sql, (movie_id,))
-            movie = cursor.fetchone()
+            sql = "SELECT * FROM movies WHERE name = %s"
+            cursor.execute(sql, (movie_name,))
+            movie = cursor.fetchone() 
+
         db.close()
 
+        if movie is None:
+            print("Movie not found")  
+            return render_template("movies.html", movie=None)  
+
+        print(movie) 
         return render_template("movies.html", movie=movie)
+
     return render_template("search_movie.html")
+
+
 
 @app.route("/list_movies")
 def list_movies():
     db = get_db_connection()
     with db.cursor() as cursor:
-        cursor.execute("select * from movies")  # Fetch all movies
-        movies = cursor.fetchall()  # Get results
+        cursor.execute("select * from movies")  
+        movies = cursor.fetchall()  
     db.close()
 
     print(movies)  

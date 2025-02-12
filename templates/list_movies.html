@@ -8,7 +8,7 @@
 <body>
     <h1>All Movies</h1>
     {% if movies %}
-        <table>
+        <table >
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -16,7 +16,7 @@
             </tr>
             {% for movie in movies %}
             <tr>
-                <td>{{ movie[0] }}</td>  
+                <td>{{ movie[0] }}</td>  <!-- Access by index -->
                 <td>{{ movie[1] }}</td>
                 <td>{{ movie[2] }}</td>
             </tr>
@@ -29,4 +29,6 @@
     <a href="/">Back to Home</a>
 </body>
 </html>
+
+
 
