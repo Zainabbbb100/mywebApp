@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movie</title>
+</head>
+<body>
+    <h1>Add a New Movie</h1>
+    <form action="/add_movie" method="POST">
+        <label for="movie_id">Movie ID:</label>
+        <input type="text" id="movie_id" name="movie_id" required><br>
+        
+        <label for="movie_name">Movie Name:</label>
+        <input type="text" id="movie_name" name="movie_name" required><br>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+        
+        <button type="submit">Add Movie</button>
+    </form>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
+
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+</head>
+<body>
+    <h1>Movie Details</h1>
+    {% if movie %}
+        <p><strong>ID:</strong> {{ movie['Movie_ID'] }}</p>
+        <p><strong>Name:</strong> {{ movie['Movie_Name'] }}</p>
+        <p><strong>Description:</strong> {{ movie['Description'] }}</p>
+    {% else %}
+        <p>No movie found.</p>
+    {% endif %}
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
