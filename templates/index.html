@@ -3,31 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Movies App - Home</title>
 </head>
 <body>
-    <h1>Login to Movies App</h1>
-    <form action="/" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-        
-        <button type="submit">Login</button>
-    </form>
-
-    <h2>Create an account?</h2>
-    <form action="/register" method="POST">
-        <label for="new_username">New Username:</label>
-        <input type="text" id="new_username" name="new_username" required><br>
-        
-        <label for="new_password">New Password:</label>
-        <input type="password" id="new_password" name="new_password" required><br>
-        
-        <button type="submit">Register</button>
-    </form>
+    <h1>Welcome to the Movies App!</h1>
+    
+    <nav>
+        <ul>
+            <li><a href="/add_movie">Add Movie</a></li>
+            <li><a href="/search_movie">Search Movie</a></li>
+            <li><a href="/list_movies">List All Movies</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
+
 
 
