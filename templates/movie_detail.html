@@ -7,16 +7,16 @@
 </head>
 <body>
     <h1>Movie Details</h1>
-    
+
     {% if movie %}
         <p><strong>ID:</strong> {{ movie[0] }}</p>
         <p><strong>Name:</strong> {{ movie[1] }}</p>
         <p><strong>Description:</strong> {{ movie[2] }}</p>
     {% else %}
-        <p style="color: red;"><strong>No movie found with that name.</strong></p>
+        <p style="color: red;"><strong>No movie found.</strong></p>
     {% endif %}
 
     <br>
-    <a href="/">Back to Home</a>
+    <a href="/logout">Logout</a>
 </body>
 </html>
