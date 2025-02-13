@@ -66,4 +66,4 @@ def list_movies():
     return render_template("list_movies.html", movies=movies)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
